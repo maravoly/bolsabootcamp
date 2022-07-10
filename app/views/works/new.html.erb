@@ -1,0 +1,51 @@
+
+<br>
+<div class="form" >
+<h1>Crear Nueva Oferta Laboral</h1>
+<%= form_with model: Work.new do |f| %>
+
+  <div class="form-check" >
+    <%= f.label :cargo, "Cargo" %>
+    <%= f.text_field :cargo, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="form-check" >
+    <%= f.label :descripcion, "Descripción" %>
+    <%= f.text_field :descripcion, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="form-check" >
+    <%= f.label :vacantes, "Vacantes" %>
+    <%= f.number_field :vacantes, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="form-check" >
+    <%= f.label :rango_salarial, "Rango Salarial" %>
+    <%= f.text_field :rango_salarial, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="form-check" >
+    <%= f.label :fecha_inicio, "Fecha Inicio" %>
+    <%= f.date_field :fecha_inicio, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="form-check" >
+    <%= f.label :modalidad, "Modalidad" %>
+    <%= f.text_field :modalidad, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="form-check" >
+    <%= f.label :regiones, "Región" %>
+    <%= f.text_field :regiones, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="form-check" >
+    <%= f.submit "Crear Oferta", class: "btn btn-info btn-lg" %>
+  </div>
+  <br>
+<% end %>
+</div><br><br><br>
+<%= link_to 'Back', works_path, class:"btn btn-secondary active btn-lg" %><br><br>
+
+  
+

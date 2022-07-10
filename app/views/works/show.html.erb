@@ -1,0 +1,58 @@
+<br><br>
+<div class="det-oferta">       
+<%= link_to ' Postular  !! ', new_work_candidato_path(@work), class: "btn btn-info btn-lg" %><br>
+                    
+<br>
+<h1>DETALLES DE LA OFERTA</h1>
+<p>
+  <strong>Cargo:</strong>
+  <%= @work.cargo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @work.descripcion %>
+</p>
+
+<p>
+  <strong>Vacantes:</strong>
+  <%= @work.vacantes %>
+</p>
+
+<p>
+  <strong>Rango salarial:</strong>
+  <%= @work.rango_salarial %>
+</p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @work.fecha_inicio %>
+</p>
+
+<p>
+  <strong>Modalidad:</strong>
+  <%= @work.modalidad %>
+</p>
+
+<p>
+  <strong>Región:</strong>
+  <%= @work.regiones %>
+</p>
+<br>
+
+<hr>
+<br>
+<p class="postulante"><strong>POSTULANTES:</strong></p>
+<ul>
+    <% if @work.candidatos %>
+        <% @work.candidatos.each do |candidato|%>
+            <li><strong><%= candidato.id %>:
+            <p><b>Nombre:</b> </strong><%= "#{candidato.nombre}" %></li>
+        <% end %>
+    <% else %>
+        <% 'No Candidatos Added!!!'%>
+    <% end %>
+</ul>
+<br>
+<%= image_tag("https://res.cloudinary.com/maravoly/image/upload/v1657441317/images/examen/retroceso_xqmvpd.png", size: "80", class: 'mx-auto d-block', class: 'img-fluid') %>
+<%= link_to 'Back', works_path, class:"btn btn-secondary active btn-lg" %><br><br>

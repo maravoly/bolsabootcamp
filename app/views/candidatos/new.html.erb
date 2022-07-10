@@ -1,0 +1,50 @@
+
+
+<br>
+<div class="ing-pos">
+<h1>Ingresar Postulación</h1><br>
+
+<%= form_with(model:[@work, @candidato]) do |form| %>
+    <div class="field">
+        <%= form.label :Rut %>
+        <%= form.text_field :rut, class:"form-group col-md-5"%>
+    </div>
+
+    <div class="field">
+        <%= form.label :Nombre %>
+        <%= form.text_field :nombre, class:"form-group col-md-5" %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Fecha_Nacimiento %>
+        <%= form.date_field :fecha_nacimiento, class:"form-group col-md-5" %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Género %>
+        <%= form.text_field :genero, class:"form-group col-md-5" %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Teléfono %>
+        <%= form.number_field :telefono, class:"form-group col-md-5" %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Email %>
+        <%= form.text_field :email, class:"form-group col-md-5" %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Contraseña %>
+        <%= form.text_field :contraseña, class:"form-group col-md-5" %>
+    </div>
+
+    <br>
+    <div class="field">
+        <%= form.submit %>
+    </div>
+    <br>
+<% end %>
+</div><br>
+<%= link_to 'Back', works_path, class:"btn btn-secondary active btn-lg" %><br><br>
